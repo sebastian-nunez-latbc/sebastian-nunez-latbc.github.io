@@ -8,4 +8,8 @@ function changeColor() {
     const randomHex = getRandomHexColor()
 
     btn.style.color = randomHex
+
+    analytics.track("Color changes", {
+        newColor: randomHex,
+    });
 }
